@@ -4,7 +4,6 @@ const jsonServer = require('json-server')
 const jwt = require('jsonwebtoken')
 const cool = require('cool-ascii-faces');
 const express = require('express');
-const path = require('path');
 const PORT = process.env.PORT || 5000;
 
 function ignoreFavicon(req, res, next) {
@@ -78,6 +77,5 @@ server.use(/^(?!\/auth).*$/,  (req, res, next) => {
 server.use(router)
 
 express()
-  server.use(express.static(path.join(__dirname, 'public')))
   server.get('/cool', (req, res) => res.send(cool()))
   server.listen(PORT, () => console.log(`Listening on ${ PORT }`));
