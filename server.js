@@ -78,4 +78,4 @@ server.use(router)
 
 express()
   server.get('/cool', (req, res) => res.send(cool()))
-  server.listen(process.env.PORT || 5000, () => console.log(`Listening on ${ PORT }`));
+  server.listen(PORT, () => console.log(`Listening on ${ PORT }`));
