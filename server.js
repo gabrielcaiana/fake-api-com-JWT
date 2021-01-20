@@ -78,6 +78,6 @@ server.use(/^(?!\/auth).*$/,  (req, res, next) => {
 server.use(router)
 
 express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .get('/cool', (req, res) => res.send(cool()))
+  server.use(express.static(path.join(__dirname, 'public')))
+  server.get('/cool', (req, res) => res.send(cool()))
   server.listen(PORT, () => console.log(`Listening on ${ PORT }`));
