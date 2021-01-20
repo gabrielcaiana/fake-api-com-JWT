@@ -2,10 +2,15 @@ const fs = require('fs')
 const bodyParser = require('body-parser')
 const jsonServer = require('json-server')
 const jwt = require('jsonwebtoken')
+const cool = require('cool-ascii-faces');
+const express = require('express');
+const path = require('path');
+const PORT = process.env.PORT || 5000;
 
 function ignoreFavicon(req, res, next) {
  if (req.originalUrl.includes('favicon.ico')) {
    res.status(204).end()
+   return
  }
  next();
 }
@@ -72,6 +77,7 @@ server.use(/^(?!\/auth).*$/,  (req, res, next) => {
 
 server.use(router)
 
-server.listen(3000, () => {
-  console.log('Run Auth API Server')
-})
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .get('/cool', (req, res) => res.send(cool()))
+  server.listen(PORT, () => console.log(`Listening on ${ PORT }`));
