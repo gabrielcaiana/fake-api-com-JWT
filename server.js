@@ -3,6 +3,13 @@ const bodyParser = require('body-parser')
 const jsonServer = require('json-server')
 const jwt = require('jsonwebtoken')
 
+function ignoreFavicon(req, res, next) {
+ if (req.originalUrl.includes('favicon.ico')) {
+   res.status(204).end()
+ }
+ next();
+}
+
 const server = jsonServer.create()
 
 const router = jsonServer.router('./db.json')
@@ -11,6 +18,8 @@ const userdb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'))
 
 server.use(bodyParser.urlencoded({extended: true}))
 server.use(bodyParser.json())
+
+server.use(ignoreFavicon)
 
 server.use(jsonServer.defaults());
 
