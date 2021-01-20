@@ -1,1 +1,1 @@
-web: npm start-auth
+web: npm run start-auth
