@@ -1,5 +1,1 @@
-{
-  "users": [
-    { "id": 1, "email": "lupe@gmail.com", "password": "122", "nome": "LUPE" }
-  ]
-}
+{"users":[{"id":1,"email":"gabrielcaianaguedes@gmail.com","password":"123","nome":"gabriel"}]}
