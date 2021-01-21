@@ -1,1 +1,10 @@
-{"users":[{"id":1,"email":"gabrielcaianaguedes@gmail.com","password":"123","nome":"gabriel"}]}
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "gabrielcaianaguedes@gmail.com",
+      "password": "123",
+      "nome": "gabriel"
+    }
+  ]
+}
