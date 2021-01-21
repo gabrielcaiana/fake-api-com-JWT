@@ -51,52 +51,6 @@ function isAuthenticated({ email, password }) {
   );
 }
 
-server.post("/auth/register", (req, res) => {
-  console.log(req.body);
-  const { email, password, nome } = req.body;
-
-  if (isAuthenticated({ email, password }) === true) {
-    const status = 401;
-    const message = "E-mail já foi utilizado!";
-    res.status(status).json({ status, message });
-    return;
-  }
-
-  fs.readFile("./users.json", (err, data) => {
-    if (err) {
-      const status = 401;
-      const message = err;
-      res.status(status).json({ status, message });
-      return;
-    }
-
-    var data = JSON.parse(data.toString());
-
-    var last_item_id =
-      data.users.length > 0 ? data.users[data.users.length - 1].id : 0;
-
-    data.users.push({ id: last_item_id + 1, email, password, nome });
-    var writeData = fs.writeFile(
-      "./users.json",
-      JSON.stringify(data),
-      (err, result) => {
-        if (err) {
-          const status = 401;
-          const message = err;
-          res.status(status).json({ status, message });
-          return;
-        }
-      }
-    );
-    userdb = data;
-  });
-
-  const access_token = createToken({ email, password });
-  console.log("Access Token:" + access_token);
-  res.status(200).json({ access_token });
-  return
-});
-
 server.post("/auth/login", (req, res) => {
   const { email, password } = req.body;
   if (isAuthenticated({ email, password }) === false) {
