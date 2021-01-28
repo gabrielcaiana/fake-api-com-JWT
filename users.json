@@ -2,9 +2,30 @@
   "users": [
     {
       "id": 1,
+      "name": "gabriel",
+      "date": "27/11/1996",
+      "height": "1.85",
+      "gender": "m",
       "email": "gabrielcaianaguedes@gmail.com",
-      "password": "123",
-      "nome": "gabriel"
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "name": "Gabriel Caiana",
+      "date": "27/11/1996",
+      "height": "1.86",
+      "gender": "m",
+      "email": "gabrielcaiana@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": 3,
+      "name": "Allan Feitosa",
+      "date": "09/02/1997",
+      "height": "1.60",
+      "gender": "m",
+      "email": "allanteeg@gmail.com",
+      "password": "123456789"
     }
   ]
 }

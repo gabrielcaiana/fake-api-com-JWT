@@ -1,5 +1,5 @@
 {
-  "products": [
+  "teste": [
     {
       "id": 1,
       "name": "Product001",
@@ -35,6 +35,13 @@
       "cost": "200",
       "quantity": "20",
       "id": 6
+    }
+  ],
+  "peso": [
+    {
+      "id": 1,
+      "peso": "1.50",
+      "data": "11/10/2020"
     }
   ]
 }

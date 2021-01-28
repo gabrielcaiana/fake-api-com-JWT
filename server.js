@@ -54,7 +54,7 @@ function isAuthenticated({ email, password }) {
 ////////
 server.post("/auth/register", (req, res) => {
   console.log(req.body);
-  const { email, password, nome } = req.body;
+  const { name, date, height, gender, email, password } = req.body;
 
   if (isAuthenticated({ email, password }) === true) {
     const status = 401;
@@ -76,7 +76,7 @@ server.post("/auth/register", (req, res) => {
     var last_item_id =
       data.users.length > 0 ? data.users[data.users.length - 1].id : 0;
 
-    data.users.push({ id: last_item_id + 1, email, password, nome });
+    data.users.push({ id: last_item_id + 1, name, date, height, gender, email, password });
     var writeData = fs.writeFile(
       "./users.json",
       JSON.stringify(data),
