@@ -1,6 +1,22 @@
 {
   "peso": [
     {
+      "headers": [
+        {
+          "text": "Data",
+          "value": "date"
+        },
+        {
+          "text": "Peso(Kg)",
+          "value": "height"
+        },
+        {
+          "text": "Ações",
+          "value": "actions"
+        }
+      ]
+    },
+    {
       "id": 1,
       "peso": "1.50",
       "data": "11/10/2020"

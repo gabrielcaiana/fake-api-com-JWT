@@ -109,7 +109,7 @@ server.post("/auth/login", (req, res) => {
     return;
   }
   const access_token = createToken({ email, password });
-  res.status(200).json({ access_token, user });
+  res.status(200).json({ access_token });
   return;
 });
 
