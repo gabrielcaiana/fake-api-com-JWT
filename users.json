@@ -26,6 +26,42 @@
       "gender": "m",
       "email": "allanteeg@gmail.com",
       "password": "123456789"
+    },
+    {
+      "id": 4,
+      "name": "Gabriel Caiana",
+      "date": "27-11-1996",
+      "height": "91",
+      "gender": "m",
+      "email": "gg@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 5,
+      "name": "Gabriel Caiana",
+      "date": "27-11-1996",
+      "height": "91",
+      "gender": "m",
+      "email": "robo@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 6,
+      "name": "Gabriel Caiana",
+      "date": "27-11-1996",
+      "height": "91",
+      "gender": "m",
+      "email": "robo2@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 7,
+      "name": "robo3",
+      "date": "2021-03-26",
+      "height": "1.85",
+      "gender": "m",
+      "email": "robo3@hotmail.com",
+      "password": "123"
     }
   ]
 }

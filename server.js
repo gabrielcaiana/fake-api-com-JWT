@@ -94,7 +94,7 @@ server.post("/auth/register", (req, res) => {
 
   const access_token = createToken({ email, password });
   console.log("Access Token:" + access_token);
-  res.status(200).json({ access_token, user });
+  res.status(200).json({ access_token });
   return;
 });
 
@@ -108,8 +108,14 @@ server.post("/auth/login", (req, res) => {
     res.status(status).json({ status, message });
     return;
   }
+
+  const user = userdb.users.filter((user) => {
+    if(user.email == email)
+    return user
+  })
+
   const access_token = createToken({ email, password });
-  res.status(200).json({ access_token });
+  res.status(200).json({ access_token, user });
   return;
 });
 
